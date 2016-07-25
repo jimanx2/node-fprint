@@ -5,12 +5,10 @@
 			"sources": [ "src/enroll.cpp", "src/verify.cpp", "src/identify.cpp", "src/fingerprint.cpp" ],
 			"include_dirs": [
 				"<!(node -e \"require('nan')\")",
-				"<!(pkg-config --cflags libfprint)",
 				"<!(pkg-config --cflags zlib)",
 				"-I/usr/include"
 			],
 			"libraries": [
-				"<!(pkg-config --libs libfprint)",
 				"<!(pkg-config --libs-only-l zlib)",
 				"-L/usr/include -lfprint"
 			],
