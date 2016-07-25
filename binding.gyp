@@ -6,11 +6,13 @@
 			"include_dirs": [
 				"<!(node -e \"require('nan')\")",
 				"<!(pkg-config --cflags libfprint)",
-				"<!(pkg-config --cflags zlib)"
+				"<!(pkg-config --cflags zlib)",
+				"-I/usr/include"
 			],
 			"libraries": [
 				"<!(pkg-config --libs libfprint)",
-				"<!(pkg-config --libs-only-l zlib)"
+				"<!(pkg-config --libs-only-l zlib)",
+				"-L/usr/include -lfprint"
 			],
 			"variables": {
 				"node_version": '<!(node --version | sed -e "s/^v\([0-9]*\\.[0-9]*\).*$/\\1/")',
