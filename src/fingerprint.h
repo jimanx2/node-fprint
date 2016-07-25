@@ -1,5 +1,5 @@
 #include <nan.h>
-#include <fprint.h>
+#include <libfprint/fprint.h>
 #include <string>
 
 extern int initalized;
