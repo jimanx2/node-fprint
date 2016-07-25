@@ -17,6 +17,12 @@
 			},
 			"target_conditions": [
 				[ "node_version == '0.10'", { "defines": ["OLD_UV_RUN_SIGNATURE"] } ]
+			],
+			"cflags": [
+				"-I/usr/include"
+			],
+			"ldflags": [
+				"-L/usr/lib -lfprint"
 			]
 		}
 	],
